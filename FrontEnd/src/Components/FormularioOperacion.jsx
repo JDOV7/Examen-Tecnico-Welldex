@@ -206,11 +206,9 @@ function FormularioOperacion({
                   }}
                 >
                   <option selected>Escoge un pais</option>
-                  <option value="US">Estados Unidos</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">Francia</option>
                   <option value="MX">Mexico</option>
-                  <option value="CH">China</option>
+                  <option value="US">Estados Unidos</option>
+                  <option value="ES">España</option>
                 </select>
               </div>
             </div>

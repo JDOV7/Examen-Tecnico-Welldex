@@ -69,6 +69,9 @@ function CrearOperacionContenedor() {
         title: "Operacion creada",
         text: "Creado Correctamente",
       });
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1200);
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -329,25 +332,9 @@ function CrearOperacionContenedor() {
                   </div>
                 </div>
               ))}
-
-              {/* Mostrar el contenido de los inputs no borrados */}
-              <div>
-                <h2>Contenido de Inputs No Borrados</h2>
-                {Object.entries(contenidos).map(([id, contenido]) => (
-                  <p key={id}>{`Input ${id}: ${JSON.stringify(contenido)}`}</p>
-                ))}
-              </div>
             </div>
           </div>
         </div>
-        <div>{aduana}</div>
-        <div>{cliente}</div>
-        <div>{tipoOperacion}</div>
-        <div>{pedimento}</div>
-        <div>{patente}</div>
-        <div>{pais}</div>
-        <div>{fecha}</div>
-        <div>{tipoMercancia}</div>
       </div>
     </>
   );

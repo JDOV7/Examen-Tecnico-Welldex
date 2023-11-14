@@ -67,6 +67,10 @@ function CrearOperacionCargaSuelta() {
         title: "Operacion creada",
         text: "Creado Correctamente",
       });
+
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1200);
     } catch (error) {
       Swal.fire({
         icon: "error",

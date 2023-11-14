@@ -12,11 +12,14 @@ import {
   ValidarOperacionDeContenedores,
   ValidarOperacionDeCargaSuelta,
   ValidarExisteOperacion,
+  ValidarCrearOperacionContenedor,
+  ValidarCrearOperacionCargaSuelta,
 } from "../Middlewares/Validaciones/index.js";
 const operacionRouter = express.Router();
 
 operacionRouter.post(
   "/operacion/contenedor",
+  ValidarCrearOperacionContenedor,
   crearOperacion,
   ValidarOperacionDeContenedores,
   crearOperacionDeContenedores
@@ -24,6 +27,7 @@ operacionRouter.post(
 
 operacionRouter.post(
   "/operacion/carga-suelta",
+  ValidarCrearOperacionCargaSuelta,
   crearOperacion,
   ValidarOperacionDeCargaSuelta,
   crearOperacionDeCargaSuelta
